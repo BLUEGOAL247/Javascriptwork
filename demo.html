@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>About Me </h1>
+    <h2> More about me</h2>
+    <p id="AboutMe"> me</p>
+    <p id="MyName"> My  name</p>
+    <p id="Intro"> intro </p>
+    <p id="School"></p>
+    <p id="Home"></p>
+    <p id="PrimarySchool"></p>
+
+    
+    <p id="ageValidiate"></p>
+
+
+
+
+    <h1>JavaScript Assignment</h1>
+
+    <div class="section">
+        <h2>Section A: Variables & About Me</h2>
+
+        <p id="fullNameDisplay"></p>
+        <p id="classNameDisplay"></p>
+        <p id="ageDisplay"></p>
+        <p id="favoriteFoodDisplay"></p>
+        <p id="stateOfOriginDisplay"></p>
+        <p id="bestSubjectDisplay"></p>
+        <p id="hobbyDisplay"></p>
+        <p id="colorCheck"></p>
+
+        <hr>
+
+        <p id="composition"></p>
+    </div>
+
+    <div class="section">
+        <h2>Section B: Operators</h2>
+
+        <p>1. To -9 add -11; divide the result by the product of -2 and 5:</p>
+        <p id="answer1" class="answer"></p>
+
+        <p>2. Find one-tenth of the difference between product of 3 and 1.4 and sum of 0.6 and 0.4:</p>
+        <p id="answer2" class="answer"></p>
+
+        <p>3. Find the remainder when 100 is divided by 9, multiply the remainder by 7 and add 5:</p>
+        <p id="answer3" class="answer"></p>
+    </div>
+
+    <script>
+
+        // Create variables and assign my own values
+        let fullName = "Olumide Adebowale";
+        let className = "JSS 2";
+        let age = 14;
+        let favoriteFood = "Jollof Rice";
+        let stateOfOrigin = "Osun";
+        let bestSubject = "Mathematics";
+        let hobby = "Coding";
+
+        // Display each variable on its own element using getElementById
+        document.getElementById("fullNameDisplay").innerHTML = "Full Name: " + fullName;
+        document.getElementById("classNameDisplay").innerHTML = "Class: " + className;
+        document.getElementById("ageDisplay").innerHTML = "Age: " + age;
+        document.getElementById("favoriteFoodDisplay").innerHTML = "Favorite Food: " + favoriteFood;
+        document.getElementById("stateOfOriginDisplay").innerHTML = "State of Origin: " + stateOfOrigin;
+        document.getElementById("bestSubjectDisplay").innerHTML = "Best Subject: " + bestSubject;
+        document.getElementById("hobbyDisplay").innerHTML = "Hobby: " + hobby;
+        document.getElementById("AboutMe").innerHTML = ' lorem  lorem lorem lorem lorem lorem ';
+        document.getElementById("MyName").innerHTML = '  my name is Olumide   ' ;
+        document.getElementById("Intro").innerHTML = 'lorem lorem lorem lore lorem' ;
+        document.getElementById("School").innerHTML = 'lorem lorem lorem lore lorem' ;
+        document.getElementById("Home").innerHTML = '  Osun- state '
+        document.getElementById("PrimarySchool").innerHTML = ' I started my primary school in Iloro,Ilesa. Osun-State  '
+         
+
+
+        let composition = "My name is " + fullName + 
+                          ". I am in " + className + 
+                          ". I am " + age + " years old. " +
+                          "My favorite food is " + favoriteFood + 
+                          ". I am from " + stateOfOrigin + " State. " +
+                          "My best subject is " + bestSubject + 
+                          " and my hobby is " + hobby + ".";
+
+        // Display the full composition inside a single <p> element
+        document.getElementById("composition").innerHTML = composition;
+
+        // 
+        // SECTION B - Operators
+
+        
+        let result1 = (-9 + -11) / (-2 * 5);
+        document.getElementById("answer1").innerHTML = "Answer: " + result1;
+
+        // Question 2:
+        // Find one-tenth of the difference between product of 3 and 1.4 and sum of 0.6 and 0.4
+        // Step by step:
+        // Product of 3 and 1.4 = 3 * 1.4 = 4.2
+        // Sum of 0.6 and 0.4 = 0.6 + 0.4 = 1.0
+        // Difference = 4.2 - 1.0 = 3.2
+        // One-tenth of 3.2 = 0.1 * 3.2 = 0.32
+        let result2 = 0.1 * ((3 * 1.4) - (0.6 + 0.4));
+        document.getElementById("answer2").innerHTML = "Answer: " + result2;
+
+        // Question 3:
+        // Find the remainder when 100 is divided by 9, multiply the remainder by 7 and add 5
+        // Step by step:
+        // 100 % 9 = 1 (because 9 * 11 = 99, remainder is 1)
+        // 1 * 7 = 7
+        // 7 + 5 = 12
+        let result3 = ((100 % 9) * 7) + 5;
+        document.getElementById("answer3").innerHTML = "Answer: " + result3;
+
+
+
+        const userAge = 22;
+        const country = "canada"
+        let text3 = "Driving is not allowed"
+
+        if(userAge == 12 || country == "canada" ) { text3 = "Driving is allowed"}
+        document.getElementById('ageValidiate').innerHTML = text3
+
+        
+
+
+//    using if, else if and else 
+        let time = new Date().getHours()
+        if (time < 10){
+            console.log("Good morning")
+        }
+        else if ( time <2 ) {
+            console.log("good Afternoon")
+        }
+        else  {
+            console.log("Good Evening" )
+        }
+
+        // ternar operator
+        // (condition) ?  expression 1: expresion2
+        const color = "blue"
+        let textColor = ( color == "green") ? "You choose the Wrong Color " : "You are right " 
+        
+        document.getElementById('colorCheck').innerHTML = textColor 
+
+
+    </script>
+
+
+
+
+<h1>JavaScript Objects</h1>
+<h2>Object Methods</h2>
+<p>A method is a function definition stored as a property value.</p>
+
+<p id="demo"></p>
+
+<script>
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+<hr>
+<br>
+<hr>
+
+
+<!-- // 1. Student Profile Card -->
+<script>
+    const student = {
+  name: "Olumide",
+  age: 20,
+  school: "Oic Hub",
+  bestSubject: "Javascript",
+  isGraduated: false
+};
+
+console.log("My name is " + student.name + " and I am " + student.age);
+
+student.city = "Osogbo";
+
+delete student.isGraduated;
+
+console.log(student.name);
+console.log(student.age);
+console.log(student.city);
+
+    
+</script>
+<hr>
+<br>
+<hr>
+
+<!-- // 2. Car Object with method -->
+
+<script>
+   const car = {
+  brand: "Toyota",
+  model: "Corolla",
+  year: 2012,
+  color: "red",
+  engineOn: false,
+
+  start: function() {
+    this.engineOn = true;
+    return "Engine started";
+  },
+
+  getInfo: function() {
+    return "This is a " + this.color + " " + this.brand + " " + this.model + " " + this.year;
+  }
+};
+
+console.log(car.start());
+console.log(car.getInfo());
+console.log(car.engineOn);
+</script>
+<hr> 
+<br>
+<hr> 
+
+
+
+<!-- // 3. My  Laptop ( nested object) -->
+<script>
+
+    const laptop = {
+  brand: "DELL",
+  price: 25000,
+  Model: 7400,
+
+  specs: {
+    ram: "8GB",
+    storage: "512GB SSD",
+    processor: "Intel Core i7"
+  }
+};
+
+console.log(laptop.specs.processor);
+
+// Change RAM
+laptop.specs.ram = "16GB";
+laptop.specs.color = "Silver";
+
+// Display the updated object
+console.log(laptop);
+
+</script>
+
+
+<hr>
+<br>
+<hr>
+
+
+<!-- //   4. Object Comparison/ Update -->
+<script>
+    const user1 = {
+        username: "Olumide122",
+        password: "IfeOluwa34"
+
+    };
+
+console.log("username" in user1);
+
+// Update password
+user1.password = "IfeDayo567";
+
+console.log(Object.keys(user1));
+
+// Log all values
+console.log(Object.values(user1));
+
+</script>
+<hr>
+<br>
+<hr>
+
+
+
+<!-- // 5. Mini Project- Resturant Menu Item -->
+<script>
+
+    const menuItem = {
+  name: "Fried Rice",
+  price: 4500,
+  isAvailable: true,
+  category: "Main Course",
+
+  order: function() {
+    if (this.isAvailable === true) {
+      return this.name + " ordered successfully for ₦" + this.price;
+    } else {
+      return "Sorry, " + this.name + " is not available";
+    }
+  }
+};
+
+console.log(menuItem.order());
+
+// Change availability
+menuItem.isAvailable = false;
+
+// Test when unavailable
+console.log(menuItem.order());
+
+
+
+
+
+
+</script>
+</body>
+</html
