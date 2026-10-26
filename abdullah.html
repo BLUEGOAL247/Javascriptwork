@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <p id="det"></p>
+    <p id="del"></p> -->
+
+    <script>
+        // Assignment 1
+        const student = {
+            name: "Ade",
+            age: 20,
+            school: "Uniosun",
+            bestSuject: "CSC201",
+            isGraduated: "False",
+            detail: function (){
+                return "My name is" + " " + this.name + " " + "i'm" + " " + this.age;
+            },
+            details: function(){
+                return this.name + " " + this.age;
+            }
+        }
+        // Adding a property
+        student.city = "Ilorin"
+        // Deleting a property
+        delete student.isGraduated;
+        console.log(student.detail());
+        console.log(student.details());
+        // document.getElementById("det").innerHTML = student.detail();
+        // document.getElementById("del").innerHTML = student.details();
+
+
+
+        // Assignment 2
+        const car = {
+            brand: "Ferarri",
+            model: "SF90",
+            year: 2025,
+            engineOn: "False",
+            start: function(){
+                this.engineOn = "True"
+                return "Engine Started"
+            },
+            getInfo: function(){
+                return "This is a " + " " + this.year + " " + this.brand + " " + this.model;
+            },  
+        }
+        console.log(car.start());
+        console.log(car.getInfo());
+
+
+        // Assignment 3
+        const laptop = {
+            brand: "Macbook",
+            price: "$1200",
+            spec: {
+                ram: "8GB",
+                storage: "1TB",
+                processor: "M5 pro"
+            }
+        }
+        console.log(laptop.spec.processor);
+        laptop.spec.ram = "16GB";
+        laptop.spec.color = "black";
+
+        // Assignment 4
+        const user1 = {
+            username: "Tunde123",
+            password: "1234"
+        }
+        console.log("username" in user1);
+        user1.password = "newPassword123";
+        console.log(Object.keys(user1));
+        console.log(Object.values(user1))
+
+        // Assignment 5
+        const menuItems = {
+            name: "Rice",
+            price: "$20",
+            isAvailable: true,
+            category: "food",
+
+            order: function(){
+                if (this.isAvailable === true){
+                    return this.name + " " + "ordered successfull for" + " " + this.price; 
+                }
+                else{
+                    return "Sorry, is not available"
+                }
+            }
+        }
+        console.log(menuItems.order());
+        menuItems.isAvailable = false;
+        console.log(menuItems.order());
+
+    </script>
+</body>
+</html>
