@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT PRACTICAL</title>
+</head>
+<body>
+
+    <h1>JS Object Practical</h1>
+
+    <p>STUDENT PROFILE CARD</p>
+    <p>Car Object With Method</p>
+    <p>My Laptop Object Nested</p>
+    <p>Object Comparison</p>
+    <p>Restaurant Menu</p>
+
+    <p id="std"></p>
+    <p id="carbrand"></p>
+
+    <script>
+
+        // FIRST QUESTION
+        let student={
+            name: "Adedayo",
+            age: "15",
+            school: "Islamic college",
+            bestsubject: "English",
+            isGraduated: true 
+        }
+        // Log sentence 
+        console.log("My name is" + " " + student.name + " " + "I am" + " " + student.age + " "+ "years old")
+        // Add another property
+           student.city= "Oshogbo";
+        //    delete property
+           delete student. isGraduated;
+
+           console.log(student.name);
+           console.log(student.age);
+
+        console.log(student);
+
+
+            //   SECOND QUESION
+        const car={
+            brand: "Toyota",
+            model: "New model",
+            year: 2024,
+            engineOn: false,
+            start(){
+            
+                this.engineOn= true;
+                return "Engine started"
+            },
+
+            getinfo: function(){
+                return "This is a"+" " + " "+ this.year +" " + " "+ this.brand +" " + " "+ this.model;
+            }
+        };
+
+        console.log(car.start());
+        console.log(car.getinfo());
+
+        // THIRD QUESTION
+
+        const laptop={
+            brand: "Hp macbook",
+            price: "$450",
+            specs:{
+                RAM: "8GB",
+                storage: "330GB SSD",
+                processor: "Intel Core i5"
+            }
+        }
+
+        console.log(laptop.specs.processor);
+        laptop.specs.RAM="16GB";
+        laptop.specs.color="black";
+
+        console.log(laptop.brand)
+
+        // FOURTH QUESTION
+
+        const user1={
+            username: "Dayo",
+            password: "2244"
+        };
+        console.log("username" in user1);
+        user1.password="newPassword2911";
+        console.log(Object.keys(user1));
+        console.log(Object.values(user1));
+
+        // FIFTH QUESTION
+
+        const menuitem={
+            name: "rice",
+            price: "2000",
+            isAvailable: true,
+            category: "Rice",
+            order(){
+                if (this.isAvailable === true){
+                    return this.name + "ordered sucessfully"+ this.price;
+                }
+                else{
+                    return "Sorry its not available";
+                }
+            }
+        };
+        console.log(menuitem.order());
+        // menuitem.isAvailable= false;
+        // console.log(menuitem.order())
+
+       
+           
+    </script>
+    
+</body>
+</html>
