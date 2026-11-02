@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //EXERCISES
+
+           //1
+        const grocery = ["rice","beans"];
+        let food = grocery.push("yam","garri");
+        grocery.unshift("salt");
+        let foodStuff = grocery.pop();
+        console.log(foodStuff);
+
+            //2
+
+        const students = ["David","Aisha","David","Tolu","David"];
+        let positionOfstudents = students.indexOf("David") + 1;
+        let positions = students.lastIndexOf("David") + 1;
+        students.includes("Aisha")
+        console.log(students.includes("Aisha"))
+
+          //3
+
+        const nums = [100,200,300,400,500,600];
+        const allNums = nums.slice(1, 4);
+        console.log(allNums);
+        console.log(nums)
+        //The original nums didn't change why? is because the slice() create a new array,
+        //And doesn't remove any element from the main source which is the nums.
+
+          //4
+
+        const towns = ["Ikeja","Lekki","Ibadan","Osogbo","Abuja"];
+        let newTown = towns.splice(2, 2);
+        towns.splice(2, 0, "Ogbomoso", "Ilorin");
+        console.log(towns);
+
+          //5
+
+        const cart = ["phone","charger","powerbank","cable"];
+         cart.splice(2, 1);
+        let newCart = cart.indexOf("powerbank");
+        console.log(newCart);
+        console.log(cart);
+
+           //6
+
+        const words = ["Javascripts","is","very","easy"];
+        words.join("");
+        console.log(words.join(""));
+        words.join("-")
+        console.log(words.join("-"));
+        let joinWords = words.toString();
+        console.log(joinWords);
+
+         //7
+
+        const invited = ["sola","Tunde","Bisi"];
+        const newGuest = "Kunle";
+
+        if (!invited.includes(newGuest)) {
+            invited.push(newGuest)
+        };
+        console.log(invited);
+
+          //8
+
+        const products = [
+            {id: 1,name: "Shoe",price: 5000},
+            {id: 2,name: "Bag",price: 3000},
+            {id: 3,name: "Cap",price: 1500}
+        ];
+        let newProducts = products.find(p => p.id === 2);
+        let newIndex = products.indexOf(newProducts);
+
+        console.log(newProducts);
+        console.log(newIndex);
+
+           //9
+
+        const a = ["a","b","c"];
+        const b = ["d","e"];
+        a.pop();
+        let c = a.concat(b);
+        console.log(c);
+        let sizeC = c.length;
+        console.log(sizeC);
+
+          //10
+
+        const sentence = ["I","am","learing","JavaScript"];
+        let position = sentence.indexOf("learing") + 1;
+        sentence.splice(2, 1, "learning");
+        sentence.push("today");
+        sentence.join(" ");
+        console.log(sentence.join(" "));
+    </script>
+</body>
+</html>
