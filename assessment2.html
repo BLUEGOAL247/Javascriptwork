@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Count 1 to 20
+    for (let i = 1; i <= 20; i++) {
+}
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+
+// 2. GREET STUDENTS
+
+let students = ["Tunde", "Bola", "Sola", "Ade"];
+for (let i = 0; i < students.length; i++) {
+    console.log(students[i] + " is present");
+}
+
+// Using for...of
+for (let student of students) {
+    console.log(student + " is present");
+}
+
+
+// 3. SUM THE NUMBERS
+
+let numbers = [10, 20, 30, 40, 50];
+
+let total = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+}
+
+console.log("Total is " + total);
+
+
+// 4. FIND THE BIGGEST
+
+let scores = [45, 67, 89, 34, 90, 12];
+
+let highest = scores[0];
+
+for (let i = 1; i < scores.length; i++) {
+    if (scores[i] > highest) {
+        highest = scores[i];
+    }
+}
+
+console.log("Highest score is " + highest);
+
+
+// 5. COUNT OCCURRENCE
+
+let fruits = ["mango", "orange", "mango", "banana", "mango"];
+
+let count = 0;
+
+for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i] === "mango") {
+        count++;
+    }
+}
+
+console.log("Mango appears " + count + " times");
+
+
+// 6. LOOP THROUGH OBJECT (for...in)
+
+let car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: 2020,
+    color: "black"
+};
+
+for (let key in car) {
+    console.log(key + ": " + car[key]);
+}
+
+
+// 7. ARRAY OF OBJECTS
+
+let products = [
+    { name: "Shoe", price: 5000 },
+    { name: "Bag", price: 3000 },
+    { name: "Cap", price: 1500 }
+];
+
+for (let i = 0; i < products.length; i++) {
+    console.log(products[i].name + " costs " + products[i].price);
+}
+
+
+// 8. REVERSE THE ARRAY
+
+let letters = ["a", "b", "c", "d", "e"];
+
+let reversed = [];
+
+for (let i = letters.length - 1; i >= 0; i--) {
+    console.log(letters[i]);
+    reversed.push(letters[i]);
+}
+
+console.log("Reversed array:", reversed);
+
+
+// 9. FILTER INTO NEW ARRAY
+
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let evenNumbers = [];
+
+for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+        evenNumbers.push(nums[i]);
+    }
+}
+
+console.log("Even numbers:", evenNumbers);
+
+
+// 10. SHOPPING CART TOTAL
+
+let cart = [
+    { name: "Bread", price: 1200, qty: 2 },
+    { name: "Milk", price: 800, qty: 1 },
+    { name: "Sugar", price: 500, qty: 3 }
+];
+
+let grandTotal = 0;
+
+for (let i = 0; i < cart.length; i++) {
+    grandTotal += cart[i].price * cart[i].qty;
+}
+
+console.log("You need to pay #" + grandTotal);
+
+    </script>
+</body>
+</html>
